@@ -1,0 +1,9 @@
+.item-action{
+    padding: 4px 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    &:hover {
+      background-color: var(--item-hover);
+ }
+}

@@ -1,0 +1,69 @@
+stages:
+  - build
+  - package
+  - deploy
+
+cache:
+  paths:
+    - ./package-lock.json
+    - ./node_modules
+  key: "CACHE_IMAGE"
+
+
+build-image:
+  stage: build
+  image: ipcam.vivas.vn:5086/16.17-alpine3.16
+  tags:
+    - vuejs # Tags for runner
+  only:
+    - tags
+  except:
+    - master
+  before_script:
+    - export T_CI_TAG=$CI_COMMIT_TAG
+    - export T_CI_DEV='VUE_APP_BASE_API_URL='"$DEV_API_URL"''
+    - export T_CI_STAG='VUE_APP_BASE_API_URL='"$STAG_API_URL"''
+    - export T_CI_PRO='VUE_APP_BASE_API_URL='"$PRO_API_URL"''
+    - sh .run.sh
+  script:
+    - echo "Compiling the code..."
+    - npm install
+    - npm --prefer-offline run build
+  artifacts:
+   paths:
+     - ./dist
+
+docker-build:
+  stage: package
+  tags:
+    - vuejs # Tags for runner
+  only:
+    - tags
+  except:
+    - master
+  variables:
+    TAG_COMMIT: $VIVAS_DOCKER_REGISTRY/sdl/sdl_portal:$CI_COMMIT_SHA
+  script:
+    - echo "package the code..."
+    - echo "$LOGIN_REGISTRY_PASSWORD" | docker login $VIVAS_DOCKER_REGISTRY --username 'robot$sdl+sdl_deploy' --password-stdin
+    - ls
+    - docker build -t $TAG_COMMIT .
+    - docker push $TAG_COMMIT
+
+
+
+deploy:
+  stage: deploy
+  image: curlimages/curl
+  variables:
+    TAG_COMMIT: $VIVAS_DOCKER_REGISTRY/sdl/sdl_portal:$CI_COMMIT_SHA
+  tags:
+    - vuejs # Tags for runner
+  only:
+    - tags
+  except:
+    - master
+  script:
+    - export T_CI_TAG=$CI_COMMIT_TAG
+    - export T_TAG_COMMIT=CURRENT_IMAGE=$TAG_COMMIT
+    - sh .deploy.sh

@@ -1,0 +1,27 @@
+.form-input {
+    background: transparent;
+    border: 0;
+    outline: 0;
+    color: #96a0aa;
+    font-size: 14px;
+    flex-grow: 1;
+    height: 38px;
+    border: 1px solid #ccc;
+    padding-left: 16px;
+    width: auto;
+    border-radius: 30px;
+    &:focus {
+      border: 1px solid var(--main-color);
+      box-shadow: 0 0 0 0.2rem #c7d2fe;
+    }
+    &:hover {
+      border: 1px solid var(--main-color);
+    }
+}
+.form-input::placeholder {
+    color: #96a0aa;
+}
+.require {
+    color: red;
+    margin-right: 4px;
+}

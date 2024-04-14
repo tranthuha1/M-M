@@ -1,0 +1,12 @@
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "../css/theme.css";
+@import "primevue/resources/primevue.min.css";
+@import "primeicons/primeicons.css";
+@import "vue-toastification/dist/index.css";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
+@import 'element-plus/dist/index.css';
+@import url('../scss/main.scss');
+@import url('../css/tcctxh.css');
