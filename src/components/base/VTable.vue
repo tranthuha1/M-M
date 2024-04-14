@@ -275,7 +275,7 @@ defineExpose({
           </tr>
         </tbody>
       </table>
-      <div class="flex justify-center mt-4 text-[#25BB94]" v-if="!rows?.length">
+      <div class="flex justify-center mt-4 text-[#000]" v-if="!rows?.length">
         <h1>{{ `Không tìm thấy ${props.tableName} phù hợp` }}</h1>
       </div>
     </div>

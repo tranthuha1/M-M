@@ -22,7 +22,7 @@ const props = defineProps({
 <style scoped>
 .button-primary {
   border-radius: 30px;
-  background-color: #25BB94;
+  background-color: #000;
   color: #fff;
   font-size: 14px;
   padding: 8px 20px;

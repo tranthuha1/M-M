@@ -5,10 +5,13 @@ import {
 } from 'vue-router';
 import dashboard from '@/router/dashboard';
 import auth from '@/router/auth';
+import home from '@/router/home';
+
 import { useUserSession } from '@/store/userSession';
 import { checkPermission } from '@/utils';
 
 const routes: Array<RouteRecordRaw> = [
+  home,
   dashboard,
   auth,
 ];
@@ -20,12 +23,12 @@ const router = createRouter({
 
 router.beforeEach(async (to, from, next) => {
   const userSession = useUserSession();
-  if (userSession.isLoggedIn && !to.meta.requiresAuth) {
+  if (userSession.isLoggedIn && !to.meta.requiresAuth && to.path.startsWith('/admin')) {
     await router.replace({
       name: 'home',
     });
   }
-  if (to.name !== 'login' && !userSession.isLoggedIn) {
+  if (to.name !== 'login' && !userSession.isLoggedIn && to.path.startsWith('/admin')) {
     next({ name: 'login' });
   }
   next();

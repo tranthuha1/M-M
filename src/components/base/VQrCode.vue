@@ -18,13 +18,13 @@ const props = defineProps<{
       :imageOptions="{ hideBackgroundDots: true, imageSize: 0.4, margin: 0 }"
       :dotsOptions="{
         type: 'dots',
-        color: '#25BB94',
+        color: '#000',
         gradient: {
           type: 'linear',
           rotation: 0,
           colorStops: [
-            { offset: 0, color: '#25BB94' },
-            { offset: 1, color: '#25BB94' },
+            { offset: 0, color: '#000' },
+            { offset: 1, color: '#000' },
           ],
         },
       }"

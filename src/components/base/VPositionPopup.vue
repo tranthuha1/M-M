@@ -126,7 +126,7 @@ const handlePaste = (event: any) => {
           Đóng
         </div>
         <button
-          class="bg-[#25BB94] p-2 rounded-2xl text-white w-[56px]"
+          class="bg-[#000] p-2 rounded-2xl text-white w-[56px]"
           type="submit"
         >
           Lưu

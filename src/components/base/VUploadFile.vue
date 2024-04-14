@@ -89,11 +89,11 @@ defineExpose({
       </div>
     </div>
     <div class="file-upload-content flex justify-center h-[40px] !min-h-0">
-      <div class="flex items-center text-[#25BB94]" v-if="file?.name"><i class="pi pi-file pr-2"></i>{{
+      <div class="flex items-center text-[#000]" v-if="file?.name"><i class="pi pi-file pr-2"></i>{{
           customFileName(file?.name)
         }} ({{ (file?.size / (1024 * 1024)).toFixed(5) }} Mb)
       </div>
-      <div v-else class="flex items-center text-[#25BB94]">
+      <div v-else class="flex items-center text-[#000]">
         <a :href="fileUrl" target="_blank"><i class="pi pi-file pr-2"></i>{{ convertUrlName(fileUrl) }}</a>
       </div>
     </div>

@@ -227,7 +227,7 @@ defineExpose({
     <div v-if="!isActiveSurvey[index] && surveyFormType === 'survey'"></div>
     <div
       :class="{
-        'border-l-2 !border-[#25BB94] border-solid': isActiveSurvey[index],
+        'border-l-2 !border-[#000] border-solid': isActiveSurvey[index],
       }"
       :style="
         surveyFormType === 'survey' ? { width: '98%' } : { width: '100%' }

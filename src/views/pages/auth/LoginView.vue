@@ -176,7 +176,7 @@ const handleKeyDown = () => {
 }
 
 .form-group i {
-  color: #25bb94;
+  color: #000;
   font-size: 14px;
   padding: 0 16px;
 }

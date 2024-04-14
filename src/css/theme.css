@@ -7,7 +7,7 @@
   --surface-f: #ffffff;
   --text-color: #495057;
   --text-color-secondary: #6c757d;
-  --primary-color: #25BB94;
+  --primary-color: #000;
   --primary-color-text: #ffffff;
   --font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica,
     Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
@@ -128,7 +128,7 @@
   --green-200: #a0e6ba;
   --green-300: #76db9b;
   --green-400: #4cd07d;
-  --green-500: #25BB94;
+  --green-500: #000;
   --green-600: #1da750;
   --green-700: #188a42;
   --green-800: #136c34;
@@ -2101,8 +2101,8 @@
 .p-buttonset.p-button-success > .p-button,
 .p-splitbutton.p-button-success > .p-button {
   color: #fff;
-  background: #25BB94;
-  border: 1px solid #25BB94;
+  background: #000;
+  border: 1px solid #000;
 }
 .p-button.p-button-success:enabled:hover,
 .p-buttonset.p-button-success > .p-button:enabled:hover,
@@ -2127,28 +2127,28 @@
 .p-buttonset.p-button-success > .p-button.p-button-outlined,
 .p-splitbutton.p-button-success > .p-button.p-button-outlined {
   background-color: transparent;
-  color: #25BB94;
+  color: #000;
   border: 1px solid;
 }
 .p-button.p-button-success.p-button-outlined:enabled:hover,
 .p-buttonset.p-button-success > .p-button.p-button-outlined:enabled:hover,
 .p-splitbutton.p-button-success > .p-button.p-button-outlined:enabled:hover {
   background: rgba(34, 197, 94, 0.04);
-  color: #25BB94;
+  color: #000;
   border: 1px solid;
 }
 .p-button.p-button-success.p-button-outlined:enabled:active,
 .p-buttonset.p-button-success > .p-button.p-button-outlined:enabled:active,
 .p-splitbutton.p-button-success > .p-button.p-button-outlined:enabled:active {
   background: rgba(34, 197, 94, 0.16);
-  color: #25BB94;
+  color: #000;
   border: 1px solid;
 }
 .p-button.p-button-success.p-button-text,
 .p-buttonset.p-button-success > .p-button.p-button-text,
 .p-splitbutton.p-button-success > .p-button.p-button-text {
   background-color: transparent;
-  color: #25BB94;
+  color: #000;
   border-color: transparent;
 }
 .p-button.p-button-success.p-button-text:enabled:hover,
@@ -2156,14 +2156,14 @@
 .p-splitbutton.p-button-success > .p-button.p-button-text:enabled:hover {
   background: rgba(34, 197, 94, 0.04);
   border-color: transparent;
-  color: #25BB94;
+  color: #000;
 }
 .p-button.p-button-success.p-button-text:enabled:active,
 .p-buttonset.p-button-success > .p-button.p-button-text:enabled:active,
 .p-splitbutton.p-button-success > .p-button.p-button-text:enabled:active {
   background: rgba(34, 197, 94, 0.16);
   border-color: transparent;
-  color: #25BB94;
+  color: #000;
 }
 .p-button.p-button-warning,
 .p-buttonset.p-button-warning > .p-button,
@@ -2629,24 +2629,24 @@
 }
 .p-splitbutton.p-button-success.p-button-outlined > .p-button {
   background-color: transparent;
-  color: #25BB94;
+  color: #000;
   border: 1px solid;
 }
 .p-splitbutton.p-button-success.p-button-outlined > .p-button:enabled:hover,
 .p-splitbutton.p-button-success.p-button-outlined
   > .p-button:not(button):not(a):not(.p-disabled):hover {
   background: rgba(34, 197, 94, 0.04);
-  color: #25BB94;
+  color: #000;
 }
 .p-splitbutton.p-button-success.p-button-outlined > .p-button:enabled:active,
 .p-splitbutton.p-button-success.p-button-outlined
   > .p-button:not(button):not(a):not(.p-disabled):active {
   background: rgba(34, 197, 94, 0.16);
-  color: #25BB94;
+  color: #000;
 }
 .p-splitbutton.p-button-success.p-button-text > .p-button {
   background-color: transparent;
-  color: #25BB94;
+  color: #000;
   border-color: transparent;
 }
 .p-splitbutton.p-button-success.p-button-text > .p-button:enabled:hover,
@@ -2654,14 +2654,14 @@
   > .p-button:not(button):not(a):not(.p-disabled):hover {
   background: rgba(34, 197, 94, 0.04);
   border-color: transparent;
-  color: #25BB94;
+  color: #000;
 }
 .p-splitbutton.p-button-success.p-button-text > .p-button:enabled:active,
 .p-splitbutton.p-button-success.p-button-text
   > .p-button:not(button):not(a):not(.p-disabled):active {
   background: rgba(34, 197, 94, 0.16);
   border-color: transparent;
-  color: #25BB94;
+  color: #000;
 }
 .p-splitbutton.p-button-warning.p-button-outlined > .p-button {
   background-color: transparent;
@@ -6608,7 +6608,7 @@
   color: #fff;
 }
 .p-badge.p-badge-success {
-  background-color: #25BB94;
+  background-color: #000;
   color: #fff;
 }
 .p-badge.p-badge-info {
@@ -6782,7 +6782,7 @@
   border-radius: 30px;
 }
 .p-tag.p-tag-success {
-  background-color: #25BB94;
+  background-color: #000;
   color: #fff;
 }
 .p-tag.p-tag-info {

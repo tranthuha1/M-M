@@ -54,6 +54,6 @@ defineExpose({
 :v-deep .p-button .p-button-success {
   color: #fff;
   background: red !important;
-  border: 1px solid #25bb94;
+  border: 1px solid #000;
 }
 </style>
