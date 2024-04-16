@@ -167,11 +167,6 @@ const toggleDropdown = (i: any, index: number) => {
   transition: transform 0.4s ease;
 }
 
-.pi-angle-left-active {
-  transform: rotate(-90deg);
-  transition: transform 0.4s ease;
-}
-
 /* Some media queries for responsiveness */
 @media screen and (max-height: 450px) {
   .sidenav {

@@ -1,4 +1,5 @@
 import HomeLayout from '@/layouts/HomeLayout.vue';
+import Home from '@/views/pages/home/index.vue';
 
 export default {
   path: '/',
@@ -8,8 +9,8 @@ export default {
     {
       path: '/home',
       name: 'home',
-      component: HomeLayout,
-      meta: { title: 'Login' },
+      component: Home,
+      meta: { title: 'Home' },
     },
   ],
 };

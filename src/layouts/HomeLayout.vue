@@ -1,3 +1,4 @@
 <template>
-    <div>homefgdgs</div>
+    <router-view />
 </template>
+<style></style>
